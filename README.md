@@ -4,8 +4,6 @@
 
 Lo stile è praticamente il tema "Ghostwriter" con qualche modifica ma **non sarà** quello finale (eventuali pull request per uniformare con lo stile dell'altro sito sono ben accette (in realtà al momento non c'è ancora un'altro sito)), ad un certo punto servirà uniformare il blog con lo stile delle altre pagine.
 
-Tutti i contenuti inseriti in Poisson e.g. articoli, guide, ecc.
-
 ## Development
 
 (poiché alla fine il blog finirà su `https://phc.dm.*****.**/blog`)
@@ -30,10 +28,12 @@ Ci sono tre "tipi" di contenuti: articoli (`post`), pagine (`page`)
     ```toml
     # /post/come-usare-git.md
     series = "git"
-    ...
+    ```
+    ```toml
     # /post/servizio-git-di-poisson.md
     series = "git"
-    ...
+    ```
+    ```toml
     # /post/altro-articolo-git-e-poisson.md
     series = "git"
     ```
@@ -49,4 +49,5 @@ Ci sono tre "tipi" di contenuti: articoli (`post`), pagine (`page`)
 - [ ] Serie su come usare `git` e come usare https://git.phc.dm.*****.**/ come remote e la frontend (probabilmente Gitea).
 - [ ] Presetazione del forum
 - [ ] Presetazione del nuovo sito
-- [ ] ...
+
+...
