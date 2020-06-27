@@ -1,0 +1,23 @@
+{{ partial "header.html" . }}
+
+<div id="post-index" class="container">
+    {{ partial "intro.html" . }}
+
+    <ol class="post-list">
+        {{ $pag := .Paginate .Pages }}
+        {{ range (where $pag.Pages "Params.featured" true) }}
+            {{ partial "post-stub.html" . }}
+        {{ end }}
+        {{ range $pag.Pages }}
+            {{ if not (in .Params.featured true) }}
+                {{ partial "post-stub.html" . }}
+            {{ end }}
+        {{ end }}
+    </ol>
+
+    <div class="post-navigation">
+        {{ partial "pagination.html" . }}
+    </div>
+</div>
+
+{{ partial "footer.html" . }}

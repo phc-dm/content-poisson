@@ -1,0 +1,29 @@
+{{ partial "header.html" . }}
+
+<div id="post-index" class="container" itemscope="" itemtype="https://schema.org/Blog">
+    {{ partial "intro.html" . }}
+
+    <ol class="post-list">
+        {{ $pag := .Paginate (where .Site.RegularPages "Type" "post") }}
+        {{ range (where $pag.Pages "Params.featured" true) }}
+            {{ partial "post-stub.html" . }}
+        {{ end }}
+    </ol>
+
+    <h3 class="post-subtitle">Recenti</h3>
+
+    <ol class="post-list">
+        {{ $pag := .Paginate (where .Site.RegularPages "Type" "post") }}
+        {{ range $pag.Pages }}
+            {{ if not (in .Params.featured "true") }}
+                {{ partial "post-stub.html" . }}
+            {{ end }}
+        {{ end }}
+    </ol>
+
+    <div class="post-navigation">
+        {{ partial "pagination.html" . }}
+    </div>
+</div>
+
+{{ partial "footer.html" . }}

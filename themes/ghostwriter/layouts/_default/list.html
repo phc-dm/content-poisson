@@ -1,0 +1,20 @@
+{{ partial "header.html" . }}
+
+<div id="post-index" class="container">
+    {{ partial "intro.html" . }}
+
+    <h3 style="text-align: center;">{{ .Name }}</h3>
+
+    <ol class="post-list">
+        {{ $pag := .Paginate .Pages }}
+        {{ range $pag.Pages }}
+            {{ partial "page-stub.html" . }}
+        {{ end }}
+    </ol>
+
+    <div class="post-navigation">
+        {{ partial "pagination.html" . }}
+    </div>
+</div>
+
+{{ partial "footer.html" . }}
