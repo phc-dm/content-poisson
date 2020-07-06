@@ -6,7 +6,7 @@ Lo stile è praticamente il tema "Ghostwriter" con qualche modifica ma **non sar
 
 ## Development
 
-(poiché alla fine il blog finirà su `https://phc.dm.*****.**/blog`)
+(poiché alla fine il blog finirà su `/blog`)
 
 ```
 hugo server -b localhost/blog
@@ -46,8 +46,8 @@ Ci sono tre "tipi" di contenuti: articoli (`post`), pagine (`page`)
 
 ## Idee per Articoli e Progetti
 
-- [ ] Serie su come usare `git` e come usare https://git.phc.dm.*****.**/ come remote e la frontend (probabilmente Gitea).
-- [ ] Presetazione del forum
-- [ ] Presetazione del nuovo sito
-
-...
+- [TODO] Serie su come usare `git` e come usare il servizio Git come remote e la frontend (che probabilmente sarà Gitea).
+- [TODO] Presetazione del forum
+- [TODO] Presetazione del nuovo sito
+- [TODO] Redirect della mail dell'aula 4
+- [TODO] Usare ssh e scambiare file tra macchine.
